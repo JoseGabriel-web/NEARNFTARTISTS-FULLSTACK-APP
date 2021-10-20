@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  width: 100%;
+  height: 10vh;
+  border-bottom: solid 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo-container {
+  width: 50%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.pages-links {
+  display: flex;  
+}
+.pages-links h4 {
+  position: relative;
+  margin-right: 20px;
+}
+.pages-links h4:hover::after {
+  position: absolute;
+  content: "";
+  top: calc(100% + 1px);
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+}
+.selected-link::after {
+  position: absolute;
+  content: "";
+  top: calc(100% + 1px);
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+}
+
+.nav-controls {
+  width: 50%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.home {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artist-list {
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.artist {
+  border: solid 1px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 1rem;
+}
+.artist h4 {
+  font-weight: normal;
+}
+
+.createProfile {
+  width: 100%;
+  height: 90vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.createProfile h1 {
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+}
+
+.form-container {  
+  display: flex;
+  flex-direction: column;
+  width: 60%;  
+}
+
+.form-container input {
+  margin-bottom: .5rem;
+  padding: 7px 14px;
+}
+
+.submit-button {
+  padding: 7px 14px;
+  background-color: black;
   color: white;
+  outline: none;
+  border: none;
+  margin-top: 1rem;
+  text-transform:uppercase;
+  font-family: "Poppins";
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.artist-list {
+  max-height: 90vh;
 }

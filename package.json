@@ -4,8 +4,11 @@
   "description": "NearNFTArtists is an smart contract on the Near Protocol blockchain which allows the creation of an NFT artist profile and for people looking to hire these artists to do so through this smart contract.",
   "main": "index.js",
   "scripts": {
-    "start": "",
-    "": ""
+    "test:contract": "cd ./contract && yarn test",
+    "build:contract": "cd ./contract && yarn build",
+    "dev:deploy:contract": "cd ./contract && near dev-deploy ./build/release/contract.wasm",
+    "start:frontend": "cd ./frontend && npm start",
+    "start:app": "npm run test:contract && npm run build:contract && npm run dev:deploy:contract && npm run start:frontend"
   },
   "author": "Jose Gabriel Mercedes Geronimo",
   "license": "MIT"
